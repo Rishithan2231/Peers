@@ -134,11 +134,7 @@ public class TrainingRecordTest {
         int d = 1;
         int m = 2;
         int y = 2003;
-        // un-comment the lines below when you've implemented the method
-//        String resultSuccess = instance.lookupEntries(d,m,y);
-//        String resultNone = instance.lookupEntries(d,m,1999);
-//        assertEquals(expectResultsNone,resultNone);
-//        assertEquals(expectResults,resultSuccess);
+ 
     }
     
 }
