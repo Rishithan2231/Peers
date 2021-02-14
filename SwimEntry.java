@@ -10,30 +10,33 @@ public class SwimEntry extends Entry
 		
 
 	}
-	
-	  public String getWhere () 
+
+	//Tries figuring whether the swimming took place indoors or outdoors. 	
+	  public String getWhere() 
 	  {
-		  String where = null;
-		  if (indoorsOrOutdoors == "pool")
+		  if (indoorsOrOutdoors.equals("pool") )
 		  {
-			  where = "in a pool";		  
-			  return where;
+			  return "in a pool";
 
 		  }
 		    
-		  else  if (indoorsOrOutdoors == "outdoors")
+		  else  if (indoorsOrOutdoors.equals("outdoors") )
 		  {
-			  where = "outdoors";
-			  return where;
+			 
+			  return "outdoors";
 
 		  }
-		  return where;		  
+		  else
+		  {
+			  return "where";
+
+		  }
 	  }
 	  
 	  public String getEntry() 
 		{
 			String result = getName() + " swam " + getDistance() + " km " + getWhere() +  " in " + getHour() + ":" + getMin() + ":" + getSec()
-					+ " on " + getDay() + "/" + getMonth() + "/" + getYear();
+					+ " on " + getDay() + "/" + getMonth() + "/" + getYear() + "\n";
 			return result;
 		} // getEntry
 	  

@@ -4,7 +4,6 @@
  * However, you're welcome to use this starter template and extend it and add
  * test for public methods you implement in TrainingRecordGUI.java
  */
-package com.stir.cscu9t4practical1;
 
 import java.awt.event.ActionEvent;
 import org.junit.jupiter.api.AfterEach;
@@ -103,7 +102,7 @@ public class TrainingRecordGUITest {
         System.out.println("Check if you have added the buttons"); 
         TrainingRecordGUI instance = new TrainingRecordGUI();
         Class<?> instanceClass = instance.getClass();
-        String[] expectedFields = {"findAllByDate","lookUpByDate"}; // add RemoveEntry when it is ready
+        String[] expectedFields = {"findAllByDate","lookUpByDate", "RemoveData"}; 
         Field fields[] = instanceClass.getDeclaredFields();
         int found = 0;
         for (Field field : fields) {

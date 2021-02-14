@@ -10,16 +10,18 @@ public class SprintEntry extends Entry {
 		howLongBreak = lb;
 	}
 
+	//Gets how many times running has been repeated.
 	public int getRepetitions() {
 		return howManyTimes;
 	}
 
+	//Gets how long the recovery period is.
 	public int getRecovery() {
 		return howLongBreak;
 	}
 
 	public String getEntry() {
-		String result = getName() + " sprinted " + getRepetitions() + "X" + getDistance() + "m in " + getHour() + ":" + getMin() + ":" + getSec()
+		String result = getName() + " sprinted " + getRepetitions() + "x" + getDistance() + "m in " + getHour() + ":" + getMin() + ":" + getSec()
 				+ " with " + getRecovery() + " minutes recovery on "  + getDay() + "/" + getMonth() + "/" + getYear() + "\n";
 		return result;
 	} // getEntry

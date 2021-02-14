@@ -19,15 +19,23 @@ public class TrainingRecord {
 	public String lookupEntry(int d, int m, int y) {
 		ListIterator<Entry> iter = tr.listIterator();
 		StringBuilder result = new StringBuilder("");
-		while (iter.hasNext()) {
+		while (iter.hasNext()) 
+		{
 			Entry current = iter.next();
 			if (current.getDay() == d && current.getMonth() == m && current.getYear() == y)
+			{
 				result.append(current.getEntry() + " ");
+
+			}
+			
+			else
+			{
+				result.append("Something is wrong.");
+
+			}
 		}
 
-		if (result.equals("")) {
-			result.append("No entires found");
-		}
+		
 		return result.toString();
 	} // lookupEntry
 
@@ -45,15 +53,24 @@ public class TrainingRecord {
 	public String deleteEntry(String n, int d, int m, int y) {
 		ListIterator<Entry> iter = tr.listIterator();
 		StringBuilder result = new StringBuilder("");
+		while (iter.hasNext()) 
+		{
 			Entry current = iter.next();
-			if (current.getName() == n &&current.getDay() == d && current.getMonth() == m && current.getYear() == y)
-				iter.previousIndex();
+			if (current.getName().equals(n) &&current.getDay() == d && current.getMonth() == m && current.getYear() == y)
+				
+				{
 				iter.remove();
-		
+				result.append("Entry deleted");
 
-		if (result.equals("")) {
-			result.append("No entires found");
-		}
-		return result.toString();
+				}
+
+			else
+			{
+				result.append("Something is wrong.");
+
+			}
 }
+		return result.toString();
+
+	}
 }// TrainingRecord

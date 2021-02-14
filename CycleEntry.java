@@ -23,7 +23,7 @@ public class CycleEntry extends Entry {
 	{
 		String result = getName() + " cycled " + getDistance() + " km in " + getHour() + ":" + getMin() + ":" + getSec()
 				+ " on " + getDay() + "/" + getMonth() + "/" + getYear() + " on " + getTerrain() + " at " + getTempo()
-				+ " tempo";
+				+ " tempo\n";
 		return result;
 	} // getEntry
 
